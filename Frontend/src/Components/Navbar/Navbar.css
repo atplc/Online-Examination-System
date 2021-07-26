@@ -1,0 +1,25 @@
+.nav-containers {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-items {
+  margin-left: 3%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+}
+.nav-items a {
+  padding: 0.3em 0.9em;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-items a:hover,
+.nav-items a:focus {
+  color: white;
+  background-color: #da9ff9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
