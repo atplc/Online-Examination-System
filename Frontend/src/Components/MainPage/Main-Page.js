@@ -3,13 +3,17 @@ import React from "react";
 import "./Main-Page.css";
 import Navbar from "../Navbar/Navbar";
 import MobileNavbar from "../Navbar/Navbar-Mobile/NavbarMobile";
+import MainButton from "../Reusable/Main-Button/MainButton";
 
 import mainPagePic from "../../images/main-page-pic.jpg";
 
 function App() {
   return (
     <div className="mainPage">
-      <MobileNavbar />
+      <div className="mobileNavbar">
+        <MobileNavbar />
+      </div>
+
       <div className="mainPage-container">
         <Navbar />
         <div className="main-page-content-container">
@@ -17,18 +21,22 @@ function App() {
             <img
               className="mainPagePic"
               src={mainPagePic}
-              alt="Girl learning using laptop"
+              alt="Student learning using laptop"
             />
           </div>
           <div className="main-page-content">
             <p>
-              ONLINE EXAMINATION
+              <span>ONLINE</span>
+              <span>EXAMINATION</span>
               <span>SYSTEM</span>
             </p>
+            <div className="learnMore-container">
+              <MainButton name={"Learn More"} />
+            </div>
           </div>
         </div>
-        <div>
-          <button className="mainButton">Learn More</button>
+        <div className="mobileLearnMore">
+          <MainButton name={"Learn More"} />
         </div>
       </div>
     </div>

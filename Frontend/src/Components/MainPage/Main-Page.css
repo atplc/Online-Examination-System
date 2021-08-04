@@ -44,25 +44,7 @@
 .main-page-content p {
   margin-bottom: 4%;
 }
-
-.mainButton {
-  padding: 0.3em 0.9em;
-  font-size: 2rem;
-  background: rgba(157, 63, 184, 0.78);
-  border-radius: 29px;
-  letter-spacing: 0.08em;
-  text-transform: capitalize;
-  color: #ffffff;
-  border: 0;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.mainButton:hover,
-.mainButton:focus {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-} */
+ */
 
 .mainPage {
   height: 100vh;
@@ -71,7 +53,7 @@
 
 .mainPage-container {
   width: 95%;
-  box-shadow: 1px 4px 20px 5px rgb(0 0 0 / 25%);
+  box-shadow: 1px 4px 20px 0px rgb(0 0 0 / 25%);
   border-radius: 15px;
   padding: 1.5%;
   text-align: center;
@@ -96,6 +78,7 @@
   width: 80%;
   margin: 0% auto;
   margin-bottom: 3%;
+  max-width: 250px;
 }
 
 .main-page-content {
@@ -105,29 +88,97 @@
   font-size: 2.2rem;
 }
 
-.main-page-content span {
+.main-page-content span:first-child::after {
+  content: " ";
+}
+
+.main-page-content span:last-child {
   display: block;
 }
 
 .main-page-content p {
   margin-bottom: 4%;
 }
-
-.mainButton {
-  padding: 0.3em 0.9em;
-  font-size: 2rem;
-  background: rgba(157, 63, 184, 0.78);
-  border-radius: 29px;
-  letter-spacing: 0.08em;
-  text-transform: capitalize;
-  color: #ffffff;
-  border: 0;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+.learnMore-container {
+  display: none;
 }
 
-.mainButton:hover,
-.mainButton:focus {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+/* Media Queries From 450px to 550px */
+@media screen and (min-width: 450px) {
+  .mobileNavbar {
+    display: none;
+  }
+  .mainPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-page-content {
+    margin-top: 2%;
+  }
+  .mainPagePic {
+    margin-bottom: 1.5%;
+  }
+}
+
+/* Media Queries From 550px to 720px */
+@media screen and (min-width: 550px) {
+  .main-page-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0% auto;
+    height: 80%;
+  }
+  .mobileLearnMore {
+    display: none;
+  }
+
+  .learnMore-container {
+    display: block;
+    text-align: left;
+  }
+  .main-page-content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+  }
+  .main-page-content,
+  .mainPagePic {
+    align-self: center;
+    padding: 0.1em;
+  }
+  .main-page-content span {
+    display: block;
+    text-align: left;
+    line-height: 110%;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    font-size: 3rem;
+  }
+  .main-page-content p {
+    margin-bottom: 3.5rem;
+  }
+  .mainPagePic {
+    width: 90%;
+  }
+}
+
+/* Media Queries From 720px to */
+@media screen and (min-width: 720px) {
+  .mainPagePic {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .main-page-content span {
+    font-size: 4rem;
+  }
+  .main-page-content p {
+    margin-bottom: 2.5rem;
+  }
+  .mainPage-container {
+    max-width: 1000px;
+  }
 }
