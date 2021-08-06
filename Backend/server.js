@@ -9,6 +9,7 @@ require("./mongo")
 
 //Models
 require("./model/Question")
+require("./model/Login")
 
 
 //MiddleWare
@@ -16,6 +17,30 @@ app.use(bodyParser.json())
    .use(morgan())
 
 const Question = mongoose.model("Question")
+
+const Login = mongoose.model("Login")
+
+
+app.get("/Login", function(req, res) {
+  res.sendFile(__dirname + "/login.html");
+});
+
+app.post("/Login",function(req,res){
+  const email = req.body.email;
+  const password = req.body.password;
+
+  Login.findOne({email : email},function(error,foundUser){
+    if(error){
+      console.log(error)
+    }else{
+      if(foundUser){
+        if(foundUser.password === password){
+          res.send("User Logged In");
+        }
+      }
+    }
+  })
+});
 
 app.get("/OnlineExaminationSystem",async function(req,res){
   try{
