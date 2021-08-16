@@ -77,7 +77,12 @@ const NavbarMobile = () => {
         </ListItem>
         <ListItem button key="4">
           <p className="nav-mobile-items">
-            <Link to="/">LOGIN / SIGNUP</Link>
+            <Link to="/">LOGIN</Link>
+          </p>
+        </ListItem>
+        <ListItem button key="3">
+          <p className="nav-mobile-items">
+            <Link to="/signup">SIGNUP</Link>
           </p>
         </ListItem>
       </List>

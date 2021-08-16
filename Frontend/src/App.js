@@ -3,12 +3,14 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import "./app.css";
 import MainPage from "./Pages/MainPage";
+import Signup from "./Pages/Signup";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Route path="/" exact component={MainPage} />
+        <Route path="/signup" exact component={Signup} />
       </BrowserRouter>
     </div>
   );
