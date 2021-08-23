@@ -77,10 +77,10 @@ const NavbarMobile = () => {
         </ListItem>
         <ListItem button key="4">
           <p className="nav-mobile-items">
-            <Link to="/">LOGIN</Link>
+            <Link to="/login">LOGIN</Link>
           </p>
         </ListItem>
-        <ListItem button key="3">
+        <ListItem button key="5">
           <p className="nav-mobile-items">
             <Link to="/signup">SIGNUP</Link>
           </p>

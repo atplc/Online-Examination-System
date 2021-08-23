@@ -23,7 +23,7 @@ const Navbar = () => {
       </div>
       <div className="nav-items">
         <p>
-          <Link to="/signup">SIGN UP</Link>/<Link to="/">LOG IN</Link>
+          <Link to="/signup">SIGN UP</Link>/<Link to="/login">LOG IN</Link>
         </p>
       </div>
     </div>
